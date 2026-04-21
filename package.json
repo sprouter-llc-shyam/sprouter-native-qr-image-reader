@@ -1,0 +1,39 @@
+{
+  "name": "sprouter-native-qr-image-reader",
+  "version": "1.0.0",
+  "description": "sample",
+  "main": "src/index",
+  "codegenConfig": {
+    "name": "SprouterNativeQrImageReaderSpec",
+    "type": "modules",
+    "jsSrcsDir": "src"
+  },
+  "author": "shyam35 <shyam@getsprouter.com> (https://github.com/sprouter-llc-shyam)",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/sprouter-llc-shyam/sprouter-native-qr-image-reader#readme",
+  "files": [
+    "src",
+    "ios",
+    "android",
+    "*.podspec"
+  ],
+  "create-react-native-library": {
+    "type": "turbo-module",
+    "languages": "kotlin-objc",
+    "tools": [
+      "eslint",
+      "jest",
+      "lefthook",
+      "release-it"
+    ],
+    "version": "0.62.0"
+  },
+  "devDependencies": {
+    "react": "19.0.0",
+    "react-native": "0.79.6"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
