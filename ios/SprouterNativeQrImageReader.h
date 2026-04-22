@@ -1,5 +1,5 @@
-#import <SprouterNativeQrImageReaderSpec/SprouterNativeQrImageReaderSpec.h>
+#import <React/RCTBridgeModule.h>
 
-@interface SprouterNativeQrImageReader : NSObject <NativeSprouterNativeQrImageReaderSpec>
+@interface SprouterNativeQrImageReader : NSObject <RCTBridgeModule>
 
 @end

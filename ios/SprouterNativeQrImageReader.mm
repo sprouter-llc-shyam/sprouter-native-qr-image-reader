@@ -1,15 +1,15 @@
 #import "SprouterNativeQrImageReader.h"
-
 #import <UIKit/UIKit.h>
 #import <Vision/Vision.h>
+#import <React/RCTConvert.h>
 
-@implementation SprouterNativeQrImageReader
+@implementation SprouterNativeQrImageReader 
 
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(readQRFromImage:(NSString *)source
-                  resolver:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
+                resolve:(RCTPromiseResolveBlock)resolve
+                 reject:(RCTPromiseRejectBlock)reject)
 {
   UIImage *image = [self loadImageFrom:source];
   if (!image) {
@@ -58,8 +58,6 @@ RCT_EXPORT_METHOD(readQRFromImage:(NSString *)source
     }
   });
 }
-
-#pragma mark - Helpers
 
 - (UIImage *)loadImageFrom:(NSString *)source
 {
