@@ -4,13 +4,17 @@ import android.graphics.BitmapFactory
 import android.util.Base64
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReactContextBaseJavaModule
+import com.facebook.react.bridge.ReactMethod
 
-@ReactModule(name = sprouternativeqrimagereaderModule.NAME)
-class sprouternativeqrimagereaderModule : NativesprouternativeqrimagereaderSpec() {
+@ReactModule(name = SprouterNativeQrImageReaderModule.NAME)
+class SprouterNativeQrImageReaderModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
   companion object {
-    const val NAME = "sprouternativeqrimagereader"
+    const val NAME = "SprouterNativeQrImageReader"
   }
 
+  @ReactMethod
   override fun readQRFromImage(source: String, promise: Promise) {
     try {
       val bitmap = loadBitmap(source)

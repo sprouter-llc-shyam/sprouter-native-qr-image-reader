@@ -1,3 +1,7 @@
+def isNewArchitectureEnabled() {
+  return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
+}
+
 buildscript {
   ext.SprouterNativeQrImageReader = [
     kotlinVersion: "2.0.21",
@@ -23,16 +27,14 @@ buildscript {
     classpath "com.android.tools.build:gradle:8.7.2"
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${getExtOrDefault('kotlinVersion')}"
-    
-    implementation 'com.google.mlkit:barcode-scanning:17.0.3'
   }
 }
 
 
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
+apply plugin: 'com.facebook.react'
 
-apply plugin: "com.facebook.react"
 
 android {
   namespace "com.sprouternativeqrimagereader"
@@ -66,4 +68,5 @@ android {
 
 dependencies {
   implementation "com.facebook.react:react-android"
+  implementation 'com.google.mlkit:barcode-scanning:17.0.3'
 }
