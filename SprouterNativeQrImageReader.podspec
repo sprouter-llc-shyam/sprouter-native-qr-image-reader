@@ -17,7 +17,8 @@ Pod::Spec.new do |s|
   s.private_header_files = "ios/**/*.h"
   s.requires_arc = true
 
-  s.frameworks = ['Vision', 'UIKit']
+  s.frameworks = 'Vision', 'UIKit'
+  s.dependency 'React-Core'
 
   install_modules_dependencies(s)
 end

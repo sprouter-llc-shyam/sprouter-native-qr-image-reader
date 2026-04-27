@@ -2,7 +2,8 @@
   "name": "sprouter-native-qr-image-reader",
   "version": "1.0.0",
   "description": "sample",
-  "main": "./lib/module/index.js",
+  "main": "./src/index.tsx",
+  "react-native": "./src/index.tsx",
   "codegenConfig": {
     "name": "SprouterNativeQrImageReaderSpec",
     "type": "modules",
