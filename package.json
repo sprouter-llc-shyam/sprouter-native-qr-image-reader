@@ -2,8 +2,10 @@
   "name": "sprouter-native-qr-image-reader",
   "version": "1.0.0",
   "description": "sample",
-  "main": "./src/index.tsx",
-  "react-native": "./src/index.tsx",
+  "main": "lib/module/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index.tsx",
   "codegenConfig": {
     "name": "SprouterNativeQrImageReaderSpec",
     "type": "modules",
@@ -11,7 +13,7 @@
   },
   "author": "shyam35 <shyam@getsprouter.com> (https://github.com/sprouter-llc-shyam)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/sprouter-llc-shyam/sprouter-native-qr-image-reader#readme",
+  "homepage": "https://github.com/sprouter-llc-shyam/sprouter-native-qr-image-reader",
   "files": [
     "src",
     "lib",
@@ -37,11 +39,13 @@
     "react": "19.0.0",
     "react-native": "0.79.6",
     "react-native-builder-bob": "^0.41.0",
+    "release-it": "^20.0.1",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "typescript": "*"
   },
   "exports": {
     ".": {
@@ -51,8 +55,8 @@
     },
     "./package.json": "./package.json"
   },
-  "types": "./lib/typescript/src/index.d.ts",
   "scripts": {
+    "release": "release-it",
     "prepare": "bob build",
     "typescript": "tsc --noEmit",
     "rebuild": "rm -rf lib node_modules && npm install"
