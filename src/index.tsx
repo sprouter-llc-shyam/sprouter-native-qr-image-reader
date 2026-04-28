@@ -1,5 +1,2 @@
-import NativeModule from "./NativeSprouterNativeQrImageReader";
-
-export function readQRFromImage(source: string) {
-  return NativeModule.readQRFromImage(source);
-}
+export { default } from "./NativeSprouterNativeQrImageReader";
+export * from "./NativeSprouterNativeQrImageReader";
