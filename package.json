@@ -17,6 +17,7 @@
   "files": [
     "src",
     "lib",
+    "react-native.config.js",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
