@@ -1,5 +1,6 @@
 package com.sprouternativeqrimagereader
 
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Base64
 import com.facebook.react.bridge.ReactApplicationContext
