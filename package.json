@@ -1,6 +1,6 @@
 {
   "name": "sprouter-native-qr-image-reader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "sample",
   "main": "lib/module/index.js",
   "module": "lib/module/index.js",
